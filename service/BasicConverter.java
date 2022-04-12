@@ -54,7 +54,7 @@ public class BasicConverter implements Converter {
     }
 
     private static int Positions (int num, int base) {
-        for (int i = 1; ; i++) {
+        for (int i = 0; ; i++) {
             if (num / (int) Math.pow(base, i) == 0) return i;
         }
     }
