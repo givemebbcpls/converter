@@ -11,21 +11,12 @@ public class InputHelper {
 
     public int getInputNumber() {
         int number = -1;
-        /* do {
-            try (BufferedReader br = new BufferedReader(new InputStreamReader(System.in))) {
-                String input = br.readLine();
-                if (input.equals("q")) checker = false;
-                number = Integer.parseInt(input);
-                if (number > 10000 & number < 0) System.out.print(errorNumberText);
-            } catch (IOException | NumberFormatException ex) {
-                System.out.print(errorNumberText);
-            }
-        } while (number > 0 & number <10000); */
         do {
             try {
                 String input = br.readLine();
                 if (input.equals("q")) {
                     checker = false;
+                    number = -1;
                     break;
                 }
                 number = Integer.parseInt(input);
@@ -39,14 +30,6 @@ public class InputHelper {
 
     public int getFromSystem() {
         int base = -1;
-        /* do {
-            try (BufferedReader br = new BufferedReader(new InputStreamReader(System.in))) {
-                base = Integer.parseInt(br.readLine());
-                if (base != 2 & base != 10) System.out.print(errorBaseText);
-            } catch (IOException | NumberFormatException ex) {
-                System.out.print(errorBaseText);
-            }
-        } while (base != 2 & base != 10); */
         do {
             try {
                 base = Integer.parseInt(br.readLine());
@@ -60,14 +43,6 @@ public class InputHelper {
 
     public int getToSystem() {
         int toSys = -1;
-        /* do {
-            try (BufferedReader br = new BufferedReader(new InputStreamReader(System.in))) {
-                toSys = Integer.parseInt(br.readLine());
-                if (toSys != 2 & toSys != 16 | toSys != 10) System.out.print(errorToText);
-            } catch (IOException | NumberFormatException ex) {
-                System.out.print(errorToText);
-            }
-        } while (toSys != 2 & toSys != 10 | toSys != 16); */
         do {
             try {
                 toSys = Integer.parseInt(br.readLine());
